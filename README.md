@@ -2,7 +2,7 @@
 
 ## Setup
 
-You should have created a Google Cloud account, created a project, created and instance, created a database in that instance called 'admin', installed MySQL Workbench and made a connection to that database. In this lesson we will practice querying data.
+You should have created a Google Cloud account, created a project, created an instance, created a database in that instance called 'admin', installed MySQL Workbench and made a connection to that database. In this lesson we will practice querying data.
 
 Start by opening MySQL Workbench
 
@@ -37,27 +37,42 @@ Also, put the answers in the "Query Responses" section of this README.
 
 1. Select all fields from users where the city equals Chicago
 
+  SELECT city FROM users WHERE city LIKE 'Chicago';
+
 2. Select the "state" field for users with a first name of "Glory"
 
+  SELECT state FROM users WHERE first_name LIKE 'Glory'; 
+
 3. Select all fields from users whose phone1 starts with "773"
+
+  SELECT * FROM users WHERE phone1 LIKE '773%'
 
 ## Query Responses
 
 1.
-  * How many rows were returned:
+  * How many rows were returned:  
+      7
   * First name of the first user:
+      Mitsue
 
 2.
   * How many rows were returned:
+      2
   * What states do they live in:
+      Maryland and Texas
 
 3.
   * How many rows were returned:
+      6
   * What's the last email on the list:
+      nichelle_meteer@meteer.com
 
 ## Summary
 
 Think about how this data is laid out. Feel free to look in the `initialize.sql` file to see the raw data.
 
 * Do you think it would be easier or harder to search through this data manually or using SQL?
+    It would be harder to search through this data manually.
+
 * What about when the dataset gets larger?
+    When the data set increases in size, the MySQL Workbench is a really useful tool.
