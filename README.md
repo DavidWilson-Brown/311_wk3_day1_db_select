@@ -37,15 +37,18 @@ Also, put the answers in the "Query Responses" section of this README.
 
 1. Select all fields from users where the city equals Chicago
 
-  SELECT city FROM users WHERE city LIKE 'Chicago';
+  SELECT * FROM users
+  WHERE city = 'Chicago';
 
 2. Select the "state" field for users with a first name of "Glory"
 
-  SELECT state FROM users WHERE first_name LIKE 'Glory'; 
+  SELECT state FROM users
+  WHERE first_name = 'Glory';
 
 3. Select all fields from users whose phone1 starts with "773"
 
-  SELECT * FROM users WHERE phone1 LIKE '773%'
+  SELECT * FROM users
+  WHERE phone1 LIKE '773%';
 
 ## Query Responses
 
@@ -75,4 +78,4 @@ Think about how this data is laid out. Feel free to look in the `initialize.sql`
     It would be harder to search through this data manually.
 
 * What about when the dataset gets larger?
-    When the data set increases in size, the MySQL Workbench is a really useful tool.
+    When the dataset increases, the use of WHERE clauses and SQL commands becomes essential to find specific information efficiently and accurately.
